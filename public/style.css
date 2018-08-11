@@ -1,0 +1,17 @@
+header {
+  width: 100%;
+  color: white;
+  background: #141B25;
+  padding: 2% 0; }
+
+#login {
+  display: flex;
+  flex-direction: column; }
+
+footer {
+  width: 100%;
+  background: #141B25;
+  color: white;
+  padding: 2% 0; }
+
+/*# sourceMappingURL=style.css.map */
