@@ -5,6 +5,30 @@ header {
   padding: 2% 0;
 
   nav {
+    color: black;
 
+    #login-form {
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        margin: 10px;
+      }
+
+      span {
+        input {
+          width: 100%;
+        }
+      }
+
+      #user-info-btn {
+        width: 40%;
+        margin: 15px auto;
+      }
+    }
+
+    .modal-footer {
+      justify-content: space-between;
+    }
   }
 }

@@ -8,6 +8,10 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  redirect '/'
+end
+
 get '/login' do
   erb :login
 end
