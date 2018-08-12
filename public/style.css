@@ -5,6 +5,12 @@ header {
   padding: 2% 0; }
   header nav {
     color: black; }
+    header nav .modal.show .modal-dialog {
+      transform: translate(0, -40%);
+      top: 40%;
+      margin: 0 auto; }
+    header nav #user-modal-header {
+      padding: 6px; }
     header nav #login-form {
       display: flex;
       flex-direction: column; }

@@ -7,6 +7,16 @@ header {
   nav {
     color: black;
 
+    .modal.show .modal-dialog {
+      transform: translate(0,-40%);
+      top: 40%;
+      margin: 0 auto;
+    }
+
+    #user-modal-header {
+      padding: 6px;
+    }
+
     #login-form {
       display: flex;
       flex-direction: column;

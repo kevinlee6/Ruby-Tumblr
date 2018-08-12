@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d9882ea-35a8-4fd1-9385-16da44035b41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/partials/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/partials/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.erb" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.erb" afterDir="false" />
@@ -82,24 +79,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Rakefile" value="20" />
-          <entry key="erb" value="602" />
-          <entry key="js" value="814" />
+          <entry key="erb" value="642" />
+          <entry key="js" value="844" />
           <entry key="rb" value="27" />
-          <entry key="scss" value="271" />
+          <entry key="scss" value="304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="21" />
-          <entry key="JavaScript" value="793" />
-          <entry key="RHTML" value="602" />
+          <entry key="HTML" value="22" />
+          <entry key="JavaScript" value="822" />
+          <entry key="RHTML" value="642" />
           <entry key="Ruby" value="47" />
-          <entry key="SCSS" value="271" />
+          <entry key="SCSS" value="304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -135,8 +132,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/partials/_header.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="130">
-                      <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+                    <state relative-caret-position="252">
+                      <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
                     </state>
                   </provider>
                 </entry>
@@ -148,8 +145,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/views/layout.erb">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="364">
-                      <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+                    <state relative-caret-position="78">
+                      <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
                     </state>
                   </provider>
                 </entry>
@@ -166,7 +163,7 @@
                 <entry file="file://$PROJECT_DIR$/views/login.erb">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="104">
-                      <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+                      <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
                     </state>
                   </provider>
                 </entry>
@@ -183,11 +180,11 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/public/script.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="182">
-                      <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+                    <state relative-caret-position="260">
+                      <caret line="58" column="102" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
                       <folding>
-                        <element signature="e#230#237#1" expanded="true" />
-                        <element signature="e#206#213#1" expanded="true" />
+                        <element signature="e#275#282#1" expanded="true" />
+                        <element signature="e#229#236#1" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -213,9 +210,9 @@
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/public/style.scss" />
         <option value="$PROJECT_DIR$/app.rb" />
+        <option value="$PROJECT_DIR$/views/layout.erb" />
         <option value="$PROJECT_DIR$/public/partials/_header.scss" />
         <option value="$PROJECT_DIR$/public/script.js" />
-        <option value="$PROJECT_DIR$/views/layout.erb" />
       </list>
     </option>
   </component>
@@ -330,16 +327,15 @@
       <workItem from="1533923798318" duration="1474000" />
       <workItem from="1534105971335" duration="221000" />
       <workItem from="1534106209546" duration="1235000" />
-      <workItem from="1534107582483" duration="6635000" />
+      <workItem from="1534107582483" duration="7550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13424000" />
+    <option name="totallyTimeSpent" value="14339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1591" y="25" width="1849" height="1413" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.087077096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -354,7 +350,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49861342" visible="true" weight="0.20921156" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49861342" visible="true" weight="0.20921156" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013866" side_tool="true" visible="true" weight="0.20921156" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49916804" visible="true" weight="0.32943013" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -456,32 +452,32 @@
     <entry file="file://$PROJECT_DIR$/views/login.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-          <folding>
-            <element signature="e#230#237#1" expanded="true" />
-            <element signature="e#206#213#1" expanded="true" />
-          </folding>
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="78">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="58" column="102" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
+          <folding>
+            <element signature="e#275#282#1" expanded="true" />
+            <element signature="e#229#236#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

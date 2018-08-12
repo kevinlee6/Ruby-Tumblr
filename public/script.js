@@ -11,14 +11,13 @@ const registerHandler = () => {
 };
 
 const register =
-    `<div class="modal-header">
-      <h5 id="user-info-header" class="modal-title" id="loginModalLabel">Register</h5>
+    `<div id="user-modal-header" class="modal-header">
+      <button class="btn btn-secondary" onclick='backHandler()'><i class="fas fa-chevron-left"></i></button>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-        <button class="btn btn-secondary" onclick='backHandler()'>Back</button>
         <form id="login-form" action="/register" method="post">
             <span>
               Create your username: <input type="text" name="username" placeholder="Enter your username"/>
@@ -32,12 +31,12 @@ const register =
             <span>
               Enter your email: <input type="text" name="email" placeholder="Enter your email"/>
             </span>
-            <input class="btn btn-primary" id="user-info-btn" type="submit" value="Register">
+            <input class="btn btn-primary" id="user-info-btn" type="submit" value="Sign up">
         </form>
     </div>`;
 
 const login =
-    `<div class="modal-header">
+    `<div id="user-modal-header" class="modal-header">
       <h5 class="modal-title" id="loginModalLabel">Log In</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -57,5 +56,5 @@ const login =
     <div class="modal-footer">
       <button id="forgot-btn" type="button" class="btn btn-info" data-dismiss="modal">Forgot username / password</button>
       or
-      <button onclick="registerHandler()" id="register-btn" type="button" class="btn btn-info">Register</button>
+      <button onclick="registerHandler()" id="register-btn" type="button" class="btn btn-info">Sign up</button>
     </div>`;
