@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ruby_tumblr.iml" filepath="$PROJECT_DIR$/.idea/ruby_tumblr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ruby-Tumblr.iml" filepath="$PROJECT_DIR$/.idea/Ruby-Tumblr.iml" />
     </modules>
   </component>
 </project>
