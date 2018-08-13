@@ -18,16 +18,22 @@ const signup =
     <div class="modal-body">
         <form id="login-form" action="/signup" method="post">
             <span>
-              Create your username: <input type="text" name="username" placeholder="Enter your username"/>
+              Enter your email: <input type="text" name="email" placeholder="Enter your email"/>
             </span>
             <span>
               Create your password: <input type="text" name="password" placeholder="Enter your password"/>
             </span>
             <span>
-              Re-enter your password: <input type="text" name="password-reenter" placeholder="Re-enter your password"/>
+              Re-enter your password: <input type="text" name="reenter_password" placeholder="Re-enter your password"/>
             </span>
             <span>
-              Enter your email: <input type="text" name="email" placeholder="Enter your email"/>
+              Enter your first name: <input type="text" name="firstname" placeholder="Enter your first name"/>
+            </span>
+            <span>
+              Enter your last name: <input type="text" name="lastname" placeholder="Enter your last name"/>
+            </span>
+            <span>
+              Enter your birthday: <input type="text" name="birthday" placeholder="Enter your birthday"/>
             </span>
             <input class="btn btn-primary" id="user-info-btn" type="submit" value="Sign up">
         </form>
