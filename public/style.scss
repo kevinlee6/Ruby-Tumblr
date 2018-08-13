@@ -2,3 +2,7 @@
 @import "partials/header";
 @import "partials/login";
 @import "partials/footer";
+
+#wrapper {
+  min-height: 93vh;
+}

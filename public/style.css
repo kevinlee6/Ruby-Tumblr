@@ -1,27 +1,33 @@
-header {
-  width: 100%;
+#main-header {
   color: white;
   background: #141B25;
-  padding: 2% 0; }
-  header nav {
+  padding: 2% 0;
+  justify-content: space-between;
+  z-index: 1050; }
+  #main-header #logo {
+    color: white;
+    margin-left: 20px; }
+  #main-header #login-btn {
+    margin-right: 20px; }
+  #main-header #loginModal {
     color: black; }
-    header nav .modal.show .modal-dialog {
+    #main-header #loginModal .modal.show .modal-dialog {
       transform: translate(0, -40%);
       top: 40%;
       margin: 0 auto; }
-    header nav #user-modal-header {
+    #main-header #loginModal #user-modal-header {
       padding: 6px; }
-    header nav #login-form {
+    #main-header #loginModal #login-form {
       display: flex;
       flex-direction: column; }
-      header nav #login-form > * {
+      #main-header #loginModal #login-form > * {
         margin: 10px; }
-      header nav #login-form span input {
+      #main-header #loginModal #login-form span input {
         width: 100%; }
-      header nav #login-form #user-info-btn {
+      #main-header #loginModal #login-form #user-info-btn {
         width: 40%;
         margin: 15px auto; }
-    header nav .modal-footer {
+    #main-header #loginModal .modal-footer {
       justify-content: space-between; }
 
 #login {
@@ -33,5 +39,8 @@ footer {
   background: #141B25;
   color: white;
   padding: 2% 0; }
+
+#wrapper {
+  min-height: 93vh; }
 
 /*# sourceMappingURL=style.css.map */

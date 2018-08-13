@@ -1,10 +1,20 @@
-header {
-  width: 100%;
+#main-header {
   color: white;
   background: $primary-color;
   padding: 2% 0;
+  justify-content: space-between;
+  z-index: 1050;
 
-  nav {
+  #logo {
+    color: white;
+    margin-left: 20px;
+  }
+
+  #login-btn {
+    margin-right: 20px;
+  }
+
+  #loginModal {
     color: black;
 
     .modal.show .modal-dialog {
