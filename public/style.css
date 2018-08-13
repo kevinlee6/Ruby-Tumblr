@@ -3,6 +3,26 @@ header {
   color: white;
   background: #141B25;
   padding: 2% 0; }
+  header nav {
+    color: black; }
+    header nav .modal.show .modal-dialog {
+      transform: translate(0, -40%);
+      top: 40%;
+      margin: 0 auto; }
+    header nav #user-modal-header {
+      padding: 6px; }
+    header nav #login-form {
+      display: flex;
+      flex-direction: column; }
+      header nav #login-form > * {
+        margin: 10px; }
+      header nav #login-form span input {
+        width: 100%; }
+      header nav #login-form #user-info-btn {
+        width: 40%;
+        margin: 15px auto; }
+    header nav .modal-footer {
+      justify-content: space-between; }
 
 #login {
   display: flex;
