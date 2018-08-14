@@ -1,0 +1,45 @@
+#register {
+  opacity: 0.9;
+  padding: 30px;
+  border-radius: 30px;
+  color: white;
+  position: sticky;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  z-index: 1;
+  width: 40%;
+  top: 20%;
+  left: 5%;
+}
+
+#landing1 {
+  position: relative;
+  height: 100vh;
+  background: white url("../media/landing.jpg") no-repeat center fixed;
+  background-size: cover;
+
+  #landing1-content {
+    color: white;
+    background: rgba(211,211,211,0.7);
+    border-radius: 30px;
+    padding: 30px;
+    font-size: 2em;
+    width: 40%;
+    position: absolute;
+    top: 14%;
+    left: 55%;
+  }
+}
+
+#landing2 {
+  height: 100vh;
+  background: white url("../media/landing2.jpeg") no-repeat center fixed;
+  background-size: cover;
+}
+
+#landing3 {
+  height: 100vh;
+  background: white url("../media/landing3.jpg") no-repeat center fixed;
+  background-size: cover;
+}

@@ -44,12 +44,12 @@ post '/signup' do
   password = params[:password]
   reenter_password = params[:reenter_password]
   birthday = params[:birthday]
-  validate = Validate.register(email, password, reenter_password, birthday)
+  @validate = Validate.register(email, password, reenter_password, birthday)
 
   if User.find_by(email: email)
     flash[:warning] = 'That email is already taken.'
     redirect '/signup'
-  elsif validate == true
+  elsif @validate == true
     User.create(
       email: email,
       password: password,
@@ -59,7 +59,7 @@ post '/signup' do
     )
     erb :signup
   else
-    flash[:warning] = validate
+    flash[:warning] = @validate
     redirect '/signup'
   end
 end
