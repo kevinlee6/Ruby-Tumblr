@@ -1,8 +1,30 @@
 @import "partials/variables";
+@import "partials/flash";
 @import "partials/header";
 @import "partials/login";
 @import "partials/footer";
 
 #wrapper {
-  min-height: 93vh;
+  min-height: 74vh;
+  margin: 2% auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    padding: 10px;
+  }
+
+  span {
+    input {
+      width: 100%;
+    }
+  }
+
+  .user-info-btn {
+    width: 40%;
+    margin: 15px auto;
+  }
 }

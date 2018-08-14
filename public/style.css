@@ -1,9 +1,38 @@
+.flash {
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 10px;
+  position: relative; }
+
+.flash.info {
+  background-color: #7cee7c; }
+
+.flash.warning {
+  background-color: #ee7c7c; }
+
+.flash a, .flash a:link, .flash a:active, .flash a:visited {
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  color: black;
+  animation: beckon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; }
+
+.flash a:hover {
+  color: white; }
+
+.hide {
+  display: none; }
+
 #main-header {
   color: white;
   background: #141B25;
   padding: 2% 0;
   justify-content: space-between;
-  z-index: 1050; }
+  z-index: 1050;
+  position: sticky;
+  top: 0; }
   #main-header #logo {
     color: white;
     margin-left: 20px; }
@@ -11,22 +40,8 @@
     margin-right: 20px; }
   #main-header #loginModal {
     color: black; }
-    #main-header #loginModal .modal.show .modal-dialog {
-      transform: translate(0, -40%);
-      top: 40%;
-      margin: 0 auto; }
     #main-header #loginModal #user-modal-header {
       padding: 6px; }
-    #main-header #loginModal #login-form {
-      display: flex;
-      flex-direction: column; }
-      #main-header #loginModal #login-form > * {
-        margin: 10px; }
-      #main-header #loginModal #login-form span input {
-        width: 100%; }
-      #main-header #loginModal #login-form #user-info-btn {
-        width: 40%;
-        margin: 15px auto; }
     #main-header #loginModal .modal-footer {
       justify-content: space-between; }
 
@@ -41,6 +56,18 @@ footer {
   padding: 2% 0; }
 
 #wrapper {
-  min-height: 93vh; }
+  min-height: 74vh;
+  margin: 2% auto; }
+
+.login-form {
+  display: flex;
+  flex-direction: column; }
+  .login-form > * {
+    padding: 10px; }
+  .login-form span input {
+    width: 100%; }
+  .login-form .user-info-btn {
+    width: 40%;
+    margin: 15px auto; }
 
 /*# sourceMappingURL=style.css.map */
