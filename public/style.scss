@@ -1,12 +1,22 @@
 @import "partials/variables";
+@import "partials/animations";
 @import "partials/flash";
 @import "partials/header";
+@import "partials/signup";
 @import "partials/login";
+@import "partials/landing";
+@import "partials/posts";
+@import "partials/new_post";
 @import "partials/footer";
 
 #wrapper {
   min-height: 74vh;
-  margin: 2% auto;
+  margin: 0;
+  padding: 0;
+}
+
+#front-page {
+  margin-top: 1%;
 }
 
 .login-form {

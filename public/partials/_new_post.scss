@@ -1,0 +1,31 @@
+#new-post {
+  margin: 1% auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      margin: 5px 0;
+    }
+
+    textarea {
+      width: 75%;
+      padding: 10px;
+    }
+
+    #new-post-title {
+      padding: 10px;
+    }
+
+    #new-post-content {
+      overflow: auto;
+      padding-bottom: 30%;
+    }
+
+    #new-post-btn {
+      width: 30%;
+    }
+  }
+}

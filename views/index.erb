@@ -1,0 +1,88 @@
+<% if session[:user_id] %>
+    <% if @posts %>
+    <div id="front-page" class="container">
+      <h3>Dashboard</h3>
+      <div id="posts-container" class="container">
+        <% @posts.reverse.each do |post| %>
+          <section>
+            <div class="container py-3 horizontal">
+              <div class="card">
+                <div class="row inner-card">
+                  <% if post.image_url.length > 0 %>
+                    <div class="col-md-2 img-container">
+                      <img src=<%= post.image_url %>>
+                    </div>
+                    <div class="col-md-10 px-3">
+                      <div class="card-block px-3">
+                        <h4 class="card-title">
+                          <a href="/user/<%= post.user_id %>/posts/<%= post.id %>"><%= post.title %></a>
+                        </h4>
+                        <h6 class="card-text"><%= post.datetime.strftime("%B %d, %Y") %>, <%= post.datetime.strftime("%I:%M%p") %> UTC</h6>
+                        <p class="card-text"><%= post.content %></p>
+                      </div>
+                    </div>
+                  <% else %>
+                    <div class="col-md-12 px-3">
+                      <div class="card-block px-3">
+                        <h4 class="card-title">
+                          <a href="/user/<%= post.user_id %>/posts/<%= post.id %>"><%= post.title %></a>
+                        </h4>
+                        <h6 class="card-text"><%= post.datetime.strftime("%B %d, %Y") %>, <%= post.datetime.strftime("%I:%M%p") %> UTC</h6>
+                        <p class="card-text"><%= post.content %></p>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </section>
+        <% end %>
+      <% else %>
+      <div id="front-page" style="margin: 0" class="fluid-container">
+        <div id="get-started">
+          <div id="get-started-content">
+            <h3>Create posts to get started.</h3>
+            <button onclick="location.href='/user/posts/new'" class="btn btn-info">New post</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div id="register" class="zoomIn">
+    <h3>Sign up to start your journey today</h3>
+    <form class="login-form" action="/signup" method="post">
+      <input type="text" name="email" placeholder="Email"/>
+      <input type="password" name="password" placeholder="Password"/>
+      <input type="password" name="reenter_password" placeholder="Re-enter your password"/>
+      <input type="text" name="firstname" placeholder="First name"/>
+      <input type="text" name="lastname" placeholder="Last name"/>
+      <input type="text" name="birthday" placeholder="Birthday MM-DD-YYYY"/>
+      <input class="btn btn-primary user-info-btn" type="submit" value="Sign up">
+    </form>
+    <p class="text-center">
+      or <button onclick="(function(){document.getElementById('login-btn').click()})()" class="btn btn-secondary">Log in</button>
+    </p>
+  </div>
+
+  <div id="landing1">
+    <div id="landing1-content" class="landing-content fadeInDownBig">
+      <p>SciHub: a place to share scientific news.</p>
+      <p> Past, present, and future.</p>
+    </div>
+  </div>
+
+  <div id="landing2">
+    <div id="landing2-content" class="landing-content">
+      <p>Blog about all things...</p>
+    </div>
+  </div>
+
+  <div id="landing3">
+    <div id="landing3-content" class="landing-content">
+      <p>...no matter the size.</p>
+    </div>
+  </div>
+
+  <script src="<%= url('scripts/index.js') %>"></script>
+<% end %>

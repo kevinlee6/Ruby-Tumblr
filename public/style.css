@@ -1,8 +1,29 @@
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1000px, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.fadeInDownBig {
+  animation: fadeInDownBig 0.8s; }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+.zoomIn {
+  animation: zoomIn 1s; }
+
 .flash {
   border-radius: 2px;
   padding: 20px;
-  margin-bottom: 10px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .flash.info {
   background-color: #7cee7c; }
@@ -35,19 +56,139 @@
   top: 0; }
   #main-header #logo {
     color: white;
-    margin-left: 20px; }
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    #main-header #logo .fab {
+      color: goldenrod;
+      margin-left: 30px;
+      margin-right: 15px;
+      font-size: 2em; }
+    #main-header #logo h1 {
+      color: silver;
+      margin-top: 5px; }
   #main-header #login-btn {
-    margin-right: 20px; }
+    margin-right: 20px;
+    font-size: 1.6em; }
   #main-header #loginModal {
-    color: black; }
+    color: black;
+    opacity: 0.9; }
     #main-header #loginModal #user-modal-header {
       padding: 6px; }
     #main-header #loginModal .modal-footer {
       justify-content: space-between; }
 
+#account-panel > * {
+  margin: 5px; }
+
+#signup {
+  margin-top: 2%; }
+
 #login {
   display: flex;
   flex-direction: column; }
+
+#register {
+  opacity: 0.9;
+  padding: 30px;
+  border-radius: 30px;
+  color: white;
+  position: sticky;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  z-index: 1;
+  width: 40%;
+  top: 20%;
+  left: 5%; }
+
+.landing-content {
+  font-size: 2em;
+  width: 40%;
+  position: relative;
+  color: white;
+  left: 55%;
+  top: 14%;
+  background: rgba(211, 211, 211, 0.7);
+  border-radius: 30px;
+  padding: 30px; }
+
+#landing1 {
+  position: relative;
+  height: 100vh;
+  background: white url("../media/landing.gif") no-repeat center fixed;
+  background-size: cover; }
+
+#landing2 {
+  height: 100vh;
+  background: white url("../media/landing2.jpeg") no-repeat center fixed;
+  background-size: cover; }
+  #landing2 #landing2-content {
+    top: 30%; }
+
+#landing3 {
+  height: 100vh;
+  background: white url("../media/landing3.jpg") no-repeat center fixed;
+  background-size: cover; }
+  #landing3 #landing3-content {
+    top: 35%; }
+
+#get-started {
+  height: 100vh;
+  background: white url(../media/landing.jpg) no-repeat center fixed;
+  background-size: cover; }
+  #get-started #get-started-content {
+    background: rgba(200, 200, 200, 0.6);
+    padding: 30px;
+    border-radius: 30px;
+    color: black;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #get-started #get-started-content button {
+      margin-top: 3%;
+      width: 40%; }
+
+#posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #posts-container section {
+    min-width: 100%; }
+    #posts-container section .horizontal {
+      width: 100%; }
+      #posts-container section .horizontal .card {
+        padding: 20px; }
+        #posts-container section .horizontal .card .inner-card {
+          align-items: center; }
+          #posts-container section .horizontal .card .inner-card .img-container {
+            margin: 10px 0;
+            text-align: center; }
+
+#new-post {
+  margin: 1% auto; }
+  #new-post form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #new-post form > * {
+      margin: 5px 0; }
+    #new-post form textarea {
+      width: 75%;
+      padding: 10px; }
+    #new-post form #new-post-title {
+      padding: 10px; }
+    #new-post form #new-post-content {
+      overflow: auto;
+      padding-bottom: 30%; }
+    #new-post form #new-post-btn {
+      width: 30%; }
 
 footer {
   width: 100%;
@@ -57,7 +198,11 @@ footer {
 
 #wrapper {
   min-height: 74vh;
-  margin: 2% auto; }
+  margin: 0;
+  padding: 0; }
+
+#front-page {
+  margin-top: 1%; }
 
 .login-form {
   display: flex;

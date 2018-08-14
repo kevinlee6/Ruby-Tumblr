@@ -1,8 +1,10 @@
 .flash {
   border-radius: 2px;
   padding: 20px;
-  margin-bottom: 10px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flash.info {
