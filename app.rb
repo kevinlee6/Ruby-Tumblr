@@ -26,7 +26,7 @@ post '/' do
   if session[:user_id]
     session[:user_id] = nil
   elsif Validate.login(email, params[:password])
-    @user = User.find_by(email: email)
+    @user = User.find_by(email: email.downcase)
     session[:user_id] = @user.id
     flash[:info] = "You have successfully logged in, #{@user.firstname}."
   else
@@ -36,17 +36,39 @@ post '/' do
   redirect '/'
 end
 
-get '/user' do
-  erb :user
-end
-
-get '/user/posts' do
+get '/user/:id' do
   begin
-    @posts = User.find(session[:user_id]).posts
+    @posts = User.find(params[:id]).posts
   rescue
+    flash[:warning] = 'There are no posts associated with this user!'
     redirect '/'
   end
   erb :posts
+end
+
+get '/user/:id/posts' do
+  begin
+    @posts = User.find(params[:id]).posts
+  rescue
+    flash[:warning] = 'There is no post id associated with this user!'
+    redirect '/'
+  end
+  erb :posts
+end
+
+get '/user/:user_id/posts/:id' do
+  begin
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    if @user.id == @post.user_id
+      erb :show_post
+    else
+      raise 'error'
+    end
+  rescue
+    flash[:warning] = 'There is no post id associated with this user!'
+    redirect "/user/#{params[:user_id]}/posts"
+  end
 end
 
 get '/user/posts/new' do
@@ -81,12 +103,12 @@ post '/signup' do
   birthday = params[:birthday]
   @validate = Validate.register(email, password, reenter_password, birthday)
 
-  if User.find_by(email: email)
+  if User.find_by(email: email.downcase)
     flash[:warning] = 'That email is already taken.'
     redirect '/signup'
   elsif @validate == true
     User.create(
-      email: email,
+      email: email.downcase,
       password: password,
       firstname: params[:firstname],
       lastname: params[:lastname],
