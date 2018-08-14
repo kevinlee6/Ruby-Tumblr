@@ -30,6 +30,29 @@ post '/' do
   redirect '/'
 end
 
+get '/user' do
+  erb :user
+end
+
+get '/user/posts' do
+
+end
+
+get '/user/posts/new' do
+  erb :new_post
+end
+
+post '/posts' do
+  Post.new(
+    title: params[:title],
+    content: params[:content],
+    user_id: session[:user_id],
+    image_url: params[:image_url]
+  )
+
+  redirect '/posts'
+end
+
 get '/login' do
   erb :login
 end
