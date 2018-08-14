@@ -5,12 +5,18 @@ require 'sinatra/reloader'
 require_relative 'validate'
 
 require './models/user'
+require './models/post'
 
 enable :sessions
 
 set :database, {adapter: 'postgresql', database: 'rumblr'}
 
 get '/' do
+  begin
+    @posts = User.find(session[:user_id]).posts
+  rescue
+    @posts = nil
+  end
   erb :index
 end
 
@@ -35,7 +41,12 @@ get '/user' do
 end
 
 get '/user/posts' do
-
+  begin
+    @posts = User.find(session[:user_id]).posts
+  rescue
+    redirect '/'
+  end
+  erb :posts
 end
 
 get '/user/posts/new' do
@@ -43,14 +54,16 @@ get '/user/posts/new' do
 end
 
 post '/posts' do
-  Post.new(
+  content = params[:content].gsub(/\r?\n/, '<br />')
+  Post.create(
     title: params[:title],
-    content: params[:content],
+    content: content,
     user_id: session[:user_id],
-    image_url: params[:image_url]
+    image_url: params[:image_url],
+    datetime: Time.now.utc
   )
 
-  redirect '/posts'
+  redirect '/user/posts'
 end
 
 get '/login' do

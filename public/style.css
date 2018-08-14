@@ -79,6 +79,9 @@
     #main-header #loginModal .modal-footer {
       justify-content: space-between; }
 
+#account-panel > * {
+  margin: 5px; }
+
 #signup {
   margin-top: 2%; }
 
@@ -131,6 +134,43 @@
   #landing3 #landing3-content {
     top: 35%; }
 
+#get-started {
+  height: 100vh;
+  background: white url(../media/landing.jpg) no-repeat center fixed;
+  background-size: cover; }
+  #get-started #get-started-content {
+    background: rgba(200, 200, 200, 0.6);
+    padding: 30px;
+    border-radius: 30px;
+    color: black;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #get-started #get-started-content button {
+      margin-top: 3%;
+      width: 40%; }
+
+#posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #posts-container section {
+    min-width: 100%; }
+    #posts-container section .horizontal {
+      width: 100%; }
+      #posts-container section .horizontal .card {
+        padding: 20px; }
+        #posts-container section .horizontal .card .inner-card {
+          align-items: center; }
+          #posts-container section .horizontal .card .inner-card .img-container {
+            margin: 10px 0;
+            text-align: center; }
+
 #new-post {
   margin: 1% auto; }
   #new-post form {
@@ -160,6 +200,9 @@ footer {
   min-height: 74vh;
   margin: 0;
   padding: 0; }
+
+#front-page {
+  margin-top: 1%; }
 
 .login-form {
   display: flex;

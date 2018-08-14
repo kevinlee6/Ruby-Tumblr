@@ -51,3 +51,29 @@
     top: 35%;
   }
 }
+
+#get-started {
+  height: 100vh;
+  background: white url(../media/landing.jpg) no-repeat center fixed;
+  background-size: cover;
+
+  #get-started-content {
+    background: rgba(200,200,200,0.6);
+    padding: 30px;
+    border-radius: 30px;
+    color: black;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button {
+      margin-top: 3%;
+      width: 40%;
+    }
+  }
+}

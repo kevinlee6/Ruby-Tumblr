@@ -5,6 +5,7 @@
 @import "partials/signup";
 @import "partials/login";
 @import "partials/landing";
+@import "partials/posts";
 @import "partials/new_post";
 @import "partials/footer";
 
@@ -12,6 +13,10 @@
   min-height: 74vh;
   margin: 0;
   padding: 0;
+}
+
+#front-page {
+  margin-top: 1%;
 }
 
 .login-form {

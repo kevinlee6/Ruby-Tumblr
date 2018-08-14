@@ -29,10 +29,10 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
-                <form action="/account" method="post">
-                  <input type="submit" class="btn btn-info" value="Change password">
-                </form>
+              <div id="account-panel" class="modal-body">
+                <button class="btn btn-info" onclick="location.href='/account'">
+                  Change password
+                </button>
                 <form action="/" method="post">
                   <input class="btn btn-info" type="submit" value="Log out">
                 </form>
@@ -67,11 +67,14 @@
   </header>
 
   <div id="wrapper" class="container-fluid">
-    <% flash.keys.each do |type| %>
-      <div class="flash <%= type %>">
-        <%= flash[type] %>
-        <button class="remove-btn btn btn-secondary">X</button>
-      </div>
+    <%if flash.keys.length > 0 %>
+      <% flash.keys.each do |type| %>
+        <div class="flash <%= type %>">
+          <%= flash[type] %>
+          <button class="remove-btn btn btn-secondary">X</button>
+        </div>
+      <% end %>
+      <script src=<%= url('scripts/flash.js') %>></script>
     <% end %>
     <%= yield %>
   </div>

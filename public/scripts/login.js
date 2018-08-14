@@ -46,5 +46,3 @@ const signupHandler = () => {
           </form>
         </div>`;
 };
-
-const login =
