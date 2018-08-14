@@ -1,8 +1,29 @@
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1000px, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.fadeInDownBig {
+  animation: fadeInDownBig 0.8s; }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+.zoomIn {
+  animation: zoomIn 1s; }
+
 .flash {
   border-radius: 2px;
   padding: 20px;
-  margin-bottom: 10px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .flash.info {
   background-color: #7cee7c; }
@@ -40,20 +61,26 @@
     flex-direction: row;
     align-items: center; }
     #main-header #logo .fab {
+      color: goldenrod;
       margin-left: 30px;
       margin-right: 15px;
       font-size: 2em; }
     #main-header #logo h1 {
+      color: silver;
       margin-top: 5px; }
   #main-header #login-btn {
     margin-right: 20px;
     font-size: 1.6em; }
   #main-header #loginModal {
-    color: black; }
+    color: black;
+    opacity: 0.9; }
     #main-header #loginModal #user-modal-header {
       padding: 6px; }
     #main-header #loginModal .modal-footer {
       justify-content: space-between; }
+
+#signup {
+  margin-top: 2%; }
 
 #login {
   display: flex;
@@ -73,31 +100,36 @@
   top: 20%;
   left: 5%; }
 
+.landing-content {
+  font-size: 2em;
+  width: 40%;
+  position: relative;
+  color: white;
+  left: 55%;
+  top: 14%;
+  background: rgba(211, 211, 211, 0.7);
+  border-radius: 30px;
+  padding: 30px; }
+
 #landing1 {
   position: relative;
   height: 100vh;
-  background: white url("../media/landing.jpg") no-repeat center fixed;
+  background: white url("../media/landing.gif") no-repeat center fixed;
   background-size: cover; }
-  #landing1 #landing1-content {
-    color: white;
-    background: rgba(211, 211, 211, 0.7);
-    border-radius: 30px;
-    padding: 30px;
-    font-size: 2em;
-    width: 40%;
-    position: absolute;
-    top: 14%;
-    left: 55%; }
 
 #landing2 {
   height: 100vh;
   background: white url("../media/landing2.jpeg") no-repeat center fixed;
   background-size: cover; }
+  #landing2 #landing2-content {
+    top: 30%; }
 
 #landing3 {
   height: 100vh;
   background: white url("../media/landing3.jpg") no-repeat center fixed;
   background-size: cover; }
+  #landing3 #landing3-content {
+    top: 35%; }
 
 footer {
   width: 100%;

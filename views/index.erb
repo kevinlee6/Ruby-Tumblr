@@ -1,30 +1,40 @@
-<div id="register">
-  <h3>Sign up today to start your journey</h3>
-  <form class="login-form" action="/signup" method="post">
-    <input type="text" name="email" placeholder="Email"/>
-    <input type="password" name="password" placeholder="Password"/>
-    <input type="password" name="reenter_password" placeholder="Re-enter your password"/>
-    <input type="text" name="firstname" placeholder="First name"/>
-    <input type="text" name="lastname" placeholder="Last name"/>
-    <input type="text" name="birthday" placeholder="Birthday MM-DD-YYYY"/>
-    <input class="btn btn-primary user-info-btn" type="submit" value="Sign up">
-  </form>
-  <p class="text-center">
-    or <button onclick="(function(){document.getElementById('login-btn').click()})()" class="btn btn-secondary">Log in</button>
-  </p>
-</div>
+<% if session[:user_id] %>
 
-<div id="landing1">
-  <div id="landing1-content">
-    <p>SciHub: a place to share scientific news.</p>
-    <p> Past, present, and future.</p>
+<% else %>
+  <div id="register" class="zoomIn">
+    <h3>Sign up to start your journey today</h3>
+    <form class="login-form" action="/signup" method="post">
+      <input type="text" name="email" placeholder="Email"/>
+      <input type="password" name="password" placeholder="Password"/>
+      <input type="password" name="reenter_password" placeholder="Re-enter your password"/>
+      <input type="text" name="firstname" placeholder="First name"/>
+      <input type="text" name="lastname" placeholder="Last name"/>
+      <input type="text" name="birthday" placeholder="Birthday MM-DD-YYYY"/>
+      <input class="btn btn-primary user-info-btn" type="submit" value="Sign up">
+    </form>
+    <p class="text-center">
+      or <button onclick="(function(){document.getElementById('login-btn').click()})()" class="btn btn-secondary">Log in</button>
+    </p>
   </div>
-</div>
 
-<div id="landing2">
+  <div id="landing1">
+    <div id="landing1-content" class="landing-content fadeInDownBig">
+      <p>SciHub: a place to share scientific news.</p>
+      <p> Past, present, and future.</p>
+    </div>
+  </div>
 
-</div>
+  <div id="landing2">
+    <div id="landing2-content" class="landing-content">
+      <p>Blog about all things...</p>
+    </div>
+  </div>
 
-<div id="landing3">
+  <div id="landing3">
+    <div id="landing3-content" class="landing-content">
+      <p>...no matter the size.</p>
+    </div>
+  </div>
 
-</div>
+  <script src="<%= url('scripts/index.js') %>"></script>
+<% end %>

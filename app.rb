@@ -19,15 +19,14 @@ post '/' do
 
   if session[:user_id]
     session[:user_id] = nil
+  elsif Validate.login(email, params[:password])
+    @user = User.find_by(email: email)
+    session[:user_id] = @user.id
+    flash[:info] = "You have successfully logged in, #{@user.firstname}."
   else
-    if Validate.login(email, params[:password])
-      @user = User.find_by(email: email)
-      session[:user_id] = @user.id
-      flash[:notice] = "You have successfully logged in, #{@user.firstname}"
-    else
-      flash[:warning] = 'Invalid username or password'
-    end
+    flash[:warning] = 'Invalid username or password.'
   end
+
   redirect '/'
 end
 
