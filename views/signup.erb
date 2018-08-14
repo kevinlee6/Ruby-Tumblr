@@ -2,25 +2,13 @@
   <p>Your account has been successfully created.</p>
 <% else %>
   <h3>Sign up</h3>
-  <form id="login-form" action="/signup" method="post">
-    <span>
-      Enter your e-mail: <input type="text" name="email" placeholder="Enter your email"/>
-    </span>
-    <span>
-      Create your password: <input type="text" name="password" placeholder="Enter your password"/>
-    </span>
-    <span>
-      Re-enter your password: <input type="text" name="reenter_password" placeholder="Re-enter your password"/>
-    </span>
-    <span>
-      Enter your first name: <input type="text" name="firstname" placeholder="Enter your first name"/>
-    </span>
-    <span>
-      Enter your last name: <input type="text" name="lastname" placeholder="Enter your last name"/>
-    </span>
-    <span>
-      Enter your birthday: <input type="text" name="birthday" placeholder="Enter your birthday"/>
-    </span>
-    <input class="btn btn-primary" id="user-info-btn" type="submit" value="Sign up">
+  <form class="login-form" action="/signup" method="post">
+    <input type="text" name="email" placeholder="Email"/>
+    <input type="password" name="password" placeholder="Password"/>
+    <input type="password" name="reenter_password" placeholder="Re-enter your password"/>
+    <input type="text" name="firstname" placeholder="First name"/>
+    <input type="text" name="lastname" placeholder="Last name"/>
+    <input type="text" name="birthday" placeholder="Birthday MM-DD-YYYY"/>
+    <input class="btn btn-primary user-info-btn" type="submit" value="Sign up">
   </form>
 <% end %>

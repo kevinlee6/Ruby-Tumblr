@@ -9,12 +9,12 @@
   margin: 2% auto;
 }
 
-#login-form {
+.login-form {
   display: flex;
   flex-direction: column;
 
   & > * {
-    margin: 10px;
+    padding: 10px;
   }
 
   span {
@@ -23,7 +23,7 @@
     }
   }
 
-  #user-info-btn {
+  .user-info-btn {
     width: 40%;
     margin: 15px auto;
   }
