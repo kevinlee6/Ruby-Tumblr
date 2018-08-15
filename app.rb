@@ -9,8 +9,6 @@ require './models/post'
 
 enable :sessions
 
-set :database, {adapter: 'postgresql', database: 'rumblr'}
-
 get '/' do
   begin
     @posts = Post.all
