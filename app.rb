@@ -13,10 +13,14 @@ set :database, {adapter: 'postgresql', database: 'rumblr'}
 
 get '/' do
   begin
-    @posts = User.find(session[:user_id]).posts
+    @posts = Post.all
+    @users = @posts.each do |post|
+      User.find(post.user_id)
+    end
   rescue
     @posts = nil
   end
+
   erb :index
 end
 
@@ -38,7 +42,8 @@ end
 
 get '/user/:id' do
   begin
-    @posts = User.find(params[:id]).posts
+    @user = User.find(params[:id])
+    @posts = @user.posts
   rescue
     flash[:warning] = 'There are no posts associated with this user!'
     redirect '/'
@@ -48,7 +53,8 @@ end
 
 get '/user/:id/posts' do
   begin
-    @posts = User.find(params[:id]).posts
+    @user = User.find(params[:id])
+    @posts = @user.posts
   rescue
     flash[:warning] = 'There is no post id associated with this user!'
     redirect '/'
