@@ -27,16 +27,16 @@ class Validate
       error_list.push('Your passwords do not match.')
     end
 
-    birthdayArr = birthday.split('-')
-    if birthdayArr.length != 3
-      error_list.push('Birthday must be in MM-DD-YYYY format.')
-    else
-      unless birthdayArr[0].to_i.between?(1, 12) &&
-             birthdayArr[1].to_i.between?(1, 31) &&
-             birthdayArr[2].to_i.between?(1900, Time.new.year)
-        error_list.push("Either the month (1-12), day (1-31), or year (1900-#{Time.new.year} is not valid.")
-      end
-    end
+    # birthdayArr = birthday.split('-')
+    # if birthdayArr.length != 3
+    #   error_list.push('Birthday must be in MM-DD-YYYY format.')
+    # else
+    #   unless birthdayArr[0].to_i.between?(1, 12) &&
+    #          birthdayArr[1].to_i.between?(1, 31) &&
+    #          birthdayArr[2].to_i.between?(1900, Time.new.year)
+    #     error_list.push("Either the month (1-12), day (1-31), or year (1900-#{Time.new.year} is not valid).")
+    #   end
+    # end
 
     error_list.length > 0 ? error_list : true
   end

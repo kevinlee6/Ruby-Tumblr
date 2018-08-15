@@ -11,10 +11,10 @@ const backHandler = () => {
         <div class="modal-body">
             <form class="login-form" action="/" method="post">
                 <span>
-                  Username: <input type="text" name="username" placeholder="Enter your username"/>
+                  Username: <input type="text" name="username" placeholder="Enter your username" required/>
                 </span>
                 <span>
-                  Password: <input type="password" name="password" placeholder="Enter your password"/>
+                  Password: <input type="password" name="password" placeholder="Enter your password" required/>
                 </span>
                 <input class="btn btn-primary user-info-btn" type="submit" value="Log In">
             </form>
@@ -36,12 +36,14 @@ const signupHandler = () => {
         </div>
         <div class="modal-body">
          <form class="login-form" action="/signup" method="post">
-            <input type="text" name="email" placeholder="Email"/>
-            <input type="password" name="password" placeholder="Password"/>
-            <input type="password" name="reenter_password" placeholder="Re-enter your password"/>
-            <input type="text" name="firstname" placeholder="First name"/>
-            <input type="text" name="lastname" placeholder="Last name"/>
-            <input type="text" name="birthday" placeholder="Birthday MM-DD-YYYY"/>
+            <input type="email" name="email" placeholder="Email" required/>
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="password" name="reenter_password" placeholder="Re-enter your password" required/>
+            <input type="text" name="firstname" placeholder="First name" required/>
+            <input type="text" name="lastname" placeholder="Last name" required/>
+            <span style="width:80%; white-space: nowrap">
+              Birthday: <input type="date" name="birthday" placeholder="Birthday MM-DD-YYYY" required/>
+            </span>
             <input class="btn btn-primary user-info-btn" type="submit" value="Sign up">
           </form>
         </div>`;

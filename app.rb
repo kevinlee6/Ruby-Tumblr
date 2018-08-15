@@ -12,9 +12,6 @@ enable :sessions
 get '/' do
   begin
     @posts = Post.all
-    @users = @posts.each do |post|
-      User.find(post.user_id)
-    end
   rescue
     @posts = nil
   end
@@ -47,6 +44,50 @@ get '/account' do
   end
 end
 
+post '/account/password' do
+  current = params[:current]
+  new = params[:new]
+  new_again = params[:new_again]
+  user = User.find(session[:user_id])
+
+  @errors = []
+
+  if current != user.password
+    @errors << 'The current password is not correct.'
+  end
+
+  if new.length < 6 || new.length > 32
+    @errors << 'Your password must be between 6 and 32 characters.'
+  end
+
+  if new != new_again
+    @errors << 'The new passwords do not match.'
+  end
+
+  if @errors.empty?
+    user.update(password: new)
+    flash[:info] = 'Your password has been successfully updated.'
+  else
+    flash[:warning] = @errors.join('<br />')
+  end
+
+  redirect '/account'
+end
+
+delete '/account' do
+  user = User.find(session[:user_id])
+
+  if params[:email] == user.email && params[:password] == user.password
+    flash[:info] = 'Your account has been successfully deleted.'
+    User.find(session[:user_id]).destroy
+    session[:user_id] = nil
+    redirect '/'
+  else
+    flash[:warning] = 'Either your email or password was incorrect.'
+    redirect '/account'
+  end
+end
+
 get '/user/:id' do
   begin
     @user = User.find(params[:id])
@@ -63,7 +104,7 @@ get '/user/:id/posts' do
     @user = User.find(params[:id])
     @posts = @user.posts
   rescue
-    flash[:warning] = 'There is no post id associated with this user!'
+    flash[:warning] = 'This user has no posts!'
     redirect '/'
   end
   erb :posts

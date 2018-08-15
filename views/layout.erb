@@ -3,6 +3,7 @@
 <head>
   <title>SciHub: Share interesting discoveries</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href=<%= url('./style.css') %> />
@@ -31,7 +32,7 @@
               </div>
               <div id="account-panel" class="modal-body">
                 <button class="btn btn-info" onclick="location.href='/account'">
-                  Change password
+                  Account panel
                 </button>
                 <form action="/" method="post">
                   <input class="btn btn-info" type="submit" value="Log out">
@@ -47,10 +48,10 @@
               <div class="modal-body">
                 <form class="login-form" action="/" method="post">
                   <span>
-                    Email: <input type="text" name="email" placeholder="Enter your email"/>
+                    Email: <input type="text" name="email" placeholder="Enter your email" required/>
                   </span>
                   <span>
-                    Password: <input type="password" name="password" placeholder="Enter your password"/>
+                    Password: <input type="password" name="password" placeholder="Enter your password" required/>
                   </span>
                   <input class="btn btn-primary user-info-btn" type="submit" value="Log In">
                 </form>
