@@ -250,4 +250,14 @@ footer {
     width: 40%;
     margin: 15px auto; }
 
+#pagenotfound {
+  color: #141B25;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(211, 211, 211, 0.8);
+  padding: 30px;
+  border-radius: 30px; }
+
 /*# sourceMappingURL=style.css.map */

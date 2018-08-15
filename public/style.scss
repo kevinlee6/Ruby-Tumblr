@@ -39,3 +39,14 @@
     margin: 15px auto;
   }
 }
+
+#pagenotfound {
+  color: $primary-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(211,211,211,0.8);
+  padding: 30px;
+  border-radius: 30px;
+}

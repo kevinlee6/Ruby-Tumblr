@@ -217,3 +217,7 @@ post '/signup' do
     redirect '/signup'
   end
 end
+
+get '/*' do
+  erb :pagenotfound
+end
