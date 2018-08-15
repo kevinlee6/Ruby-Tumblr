@@ -89,6 +89,17 @@
   display: flex;
   flex-direction: column; }
 
+.account-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 3% auto; }
+  .account-form input {
+    padding: 10px; }
+  .account-form .account-form-btn {
+    width: 50%;
+    margin: 10px auto; }
+
 #register {
   opacity: 0.9;
   padding: 30px;
@@ -155,39 +166,63 @@
       margin-top: 3%;
       width: 40%; }
 
+#front-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: center; }
+
+#show-post-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 15px auto 0 auto; }
+
+#show-post-with-img {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 88%; }
+
 #posts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-  #posts-container section {
-    min-width: 100%; }
-    #posts-container section .horizontal {
-      width: 100%; }
-      #posts-container section .horizontal .card {
-        padding: 20px; }
-        #posts-container section .horizontal .card .inner-card {
-          align-items: center; }
-          #posts-container section .horizontal .card .inner-card .img-container {
-            margin: 10px 0;
-            text-align: center; }
 
-#new-post {
+section {
+  min-width: 100%; }
+  section .horizontal {
+    width: 100%; }
+    section .horizontal .card {
+      padding: 20px; }
+      section .horizontal .card .inner-card {
+        align-items: center; }
+        section .horizontal .card .inner-card .card-content {
+          max-height: 30vh;
+          overflow: auto; }
+        section .horizontal .card .inner-card .img-container {
+          margin: 10px 0;
+          padding: 5px;
+          text-align: center; }
+          section .horizontal .card .inner-card .img-container img {
+            max-width: 100%; }
+
+#new-post, #edit-post {
   margin: 1% auto; }
-  #new-post form {
+  #new-post form, #edit-post form {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    #new-post form > * {
+    #new-post form > *, #edit-post form > * {
       margin: 5px 0; }
-    #new-post form textarea {
+    #new-post form textarea, #edit-post form textarea {
       width: 75%;
       padding: 10px; }
-    #new-post form #new-post-title {
+    #new-post form #post-title, #edit-post form #post-title {
       padding: 10px; }
-    #new-post form #new-post-content {
+    #new-post form #post-content, #edit-post form #post-content {
       overflow: auto;
       padding-bottom: 30%; }
-    #new-post form #new-post-btn {
+    #new-post form #post-btn, #edit-post form #post-btn {
       width: 30%; }
 
 footer {

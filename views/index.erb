@@ -1,7 +1,10 @@
 <% if session[:user_id] %>
     <% if @posts && @posts.length > 0 %>
     <div id="front-page" class="container">
-      <h3>Dashboard</h3>
+      <div id="front-page-header">
+        <h3>Latest posts</h3>
+        <button onclick="location.href='/user/posts/new'" class="btn btn-info">Add post</button>
+      </div>
       <div id="posts-container" class="container">
         <% @posts.reverse.each do |post| %>
           <section>
@@ -9,16 +12,21 @@
               <div class="card">
                 <div class="row inner-card">
                   <% if post.image_url.length > 0 %>
-                    <div class="col-md-2 img-container">
+                    <div class="col-md-4 img-container">
                       <img src=<%= post.image_url %>>
                     </div>
-                    <div class="col-md-10 px-3">
+                    <div class="col-md-8 px-3">
                       <div class="card-block px-3">
                         <h4 class="card-title">
                           <a href="/user/<%= post.user_id %>/posts/<%= post.id %>"><%= post.title %></a>
                         </h4>
+                        <h5 class="card-text">
+                          <a href="/user/<%= post.user_id %>/posts">
+                            <%= post.user.firstname %> <%= post.user.lastname %>
+                          </a>
+                        </h5>
                         <h6 class="card-text"><%= post.datetime.strftime("%B %d, %Y") %>, <%= post.datetime.strftime("%I:%M%p") %> UTC</h6>
-                        <p class="card-text"><%= post.content.gsub(/\r?\n/, '<br />') %></p>
+                        <p class="card-text card-content"><%= post.content.gsub(/\r?\n/, '<br />') %></p>
                       </div>
                     </div>
                   <% else %>
@@ -27,8 +35,13 @@
                         <h4 class="card-title">
                           <a href="/user/<%= post.user_id %>/posts/<%= post.id %>"><%= post.title %></a>
                         </h4>
+                        <h5 class="card-text">
+                          <a href="/user/<%= post.user_id %>/posts">
+                            <%= post.user.firstname %> <%= post.user.lastname %>
+                          </a>
+                        </h5>
                         <h6 class="card-text"><%= post.datetime.strftime("%B %d, %Y") %>, <%= post.datetime.strftime("%I:%M%p") %> UTC</h6>
-                        <p class="card-text"><%= post.content.gsub(/\r?\n/, '<br />') %></p>
+                        <p class="card-text card-content"><%= post.content.gsub(/\r?\n/, '<br />') %></p>
                       </div>
                     </div>
                   <% end %>

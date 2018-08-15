@@ -1,4 +1,4 @@
-#new-post {
+#new-post, #edit-post {
   margin: 1% auto;
 
   form {
@@ -15,16 +15,16 @@
       padding: 10px;
     }
 
-    #new-post-title {
+    #post-title {
       padding: 10px;
     }
 
-    #new-post-content {
+    #post-content {
       overflow: auto;
       padding-bottom: 30%;
     }
 
-    #new-post-btn {
+    #post-btn {
       width: 30%;
     }
   }

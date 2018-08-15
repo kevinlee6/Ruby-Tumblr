@@ -38,6 +38,15 @@ post '/' do
   redirect '/'
 end
 
+get '/account' do
+  if session[:user_id]
+    erb :account
+  else
+    flash[:warning] = 'Sign up to start blogging.'
+    redirect '/signup'
+  end
+end
+
 get '/user/:id' do
   begin
     @user = User.find(params[:id])
@@ -73,6 +82,38 @@ get '/user/:user_id/posts/:id' do
     flash[:warning] = 'There is no post id associated with this user!'
     redirect "/user/#{params[:user_id]}/posts"
   end
+end
+
+get '/user/:user_id/posts/:id/edit' do
+  begin
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    if @user.id == session[:user_id]
+      erb :edit_post
+    else
+      raise 'error'
+    end
+  rescue
+    flash[:warning] = "You don't have permission to edit this post."
+    redirect "/user/#{params[:user_id]}/posts/#{params[:id]}"
+  end
+end
+
+post '/user/:user_id/posts/:id/edit' do
+  user = session[:user_id]
+  post = Post.find(params[:id])
+
+  if user == post.user_id
+    post.update(
+      title: params[:title],
+      content: params[:content],
+      image_url: params[:image_url]
+    )
+  else
+    flash[:warning] = "You don't have the permissions to edit this post."
+  end
+
+  redirect "/user/#{params[:user_id]}/posts/#{params[:id]}"
 end
 
 get '/user/posts/new' do
