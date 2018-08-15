@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_232211) do
     t.string "password"
     t.string "firstname"
     t.string "lastname"
-    t.date "birthday"
+    t.datetime "birthday"
   end
 
 end

@@ -82,14 +82,19 @@ get '/user/posts/new' do
 end
 
 post '/posts' do
-  content = params[:content].gsub(/\r?\n/, '<br />')
-  Post.create(
-    title: params[:title],
-    content: content,
-    user_id: session[:user_id],
-    image_url: params[:image_url],
-    datetime: Time.now.utc
-  )
+  title = params[:title]
+  validate = Validate.post(title)
+  if validate == true
+    Post.create(
+      title: title,
+      content: params[:content],
+      user_id: session[:user_id],
+      image_url: params[:image_url],
+      datetime: Time.now.utc
+    )
+  else
+    flash[:warning] = validate
+  end
 
   redirect '/user/posts'
 end
@@ -106,8 +111,10 @@ post '/signup' do
   email = params[:email]
   password = params[:password]
   reenter_password = params[:reenter_password]
+  firstname = params[:firstname]
+  lastname = params[:lastname]
   birthday = params[:birthday]
-  @validate = Validate.register(email, password, reenter_password, birthday)
+  @validate = Validate.register(email, password, reenter_password, firstname, lastname, birthday)
 
   if User.find_by(email: email.downcase)
     flash[:warning] = 'That email is already taken.'
@@ -116,13 +123,17 @@ post '/signup' do
     User.create(
       email: email.downcase,
       password: password,
-      firstname: params[:firstname],
-      lastname: params[:lastname],
+      firstname: firstname,
+      lastname: lastname,
       birthday: birthday
     )
     erb :signup
   else
-    flash[:warning] = @validate
+    @errors = [@validate.slice!(0)]
+    @validate.each do |x|
+      @errors << x
+    end
+    flash[:warning] = @errors.join('<br />')
     redirect '/signup'
   end
 end

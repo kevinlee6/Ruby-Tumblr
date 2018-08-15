@@ -14,7 +14,7 @@
               </h4>
               <h5 class="card-text"><%= @user.firstname %> <%= @user.lastname %></h5>
               <h6 class="card-text"><%= @post.datetime.strftime("%B %d, %Y") %>, <%= @post.datetime.strftime("%I:%M%p") %> UTC</h6>
-              <p class="card-text"><%= @post.content %></p>
+              <p class="card-text"><%= @post.content.gsub(/\r?\n/, '<br />') %></p>
             </div>
           </div>
         <% else %>
@@ -25,7 +25,7 @@
               </h4>
               <h5 class="card-text"><%= @user.firstname %> <%= @user.lastname %></h5>
               <h6 class="card-text"><%= @post.datetime.strftime("%B %d, %Y") %>, <%= @post.datetime.strftime("%I:%M%p") %> UTC</h6>
-              <p class="card-text"><%= @post.content %></p>
+              <p class="card-text"><%= @post.content.gsub(/\r?\n/, '<br />') %></p>
             </div>
           </div>
         <% end %>
