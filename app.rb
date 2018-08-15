@@ -3,6 +3,8 @@ require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'sinatra/reloader'
 require_relative 'validate'
+require 'will_paginate'
+require 'will_paginate/active_record'
 
 require './models/user'
 require './models/post'
@@ -11,7 +13,8 @@ enable :sessions
 
 get '/' do
   begin
-    @posts = Post.all
+    @posts = Post.limit(20).offset(params[:page])
+    @paginate = Post.paginate(:page => params[:page], :per_page => 20)
   rescue
     @posts = nil
   end
@@ -91,7 +94,8 @@ end
 get '/user/:id' do
   begin
     @user = User.find(params[:id])
-    @posts = @user.posts
+    @posts = @user.posts.limit(20)
+    @paginate = @posts.paginate(:page => params[:page], :per_page => 20)
   rescue
     flash[:warning] = 'There are no posts associated with this user!'
     redirect '/'
@@ -102,7 +106,8 @@ end
 get '/user/:id/posts' do
   begin
     @user = User.find(params[:id])
-    @posts = @user.posts
+    @posts = @user.posts.limit(20)
+    @paginate = @posts.paginate(:page => params[:page], :per_page => 20)
   rescue
     flash[:warning] = 'This user has no posts!'
     redirect '/'

@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'kaminari'
+gem 'lorem_ipsum_amet'
 gem 'pg'
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'sinatra-reloader'
+gem 'will_paginate'
