@@ -1,6 +1,6 @@
 <div id="signup" class="container">
   <% if @validate == true %>
-    <p>Your account has been successfully created. Log in to start sharing.</p>
+    <p>Your account has been successfully created. <a href='#' onclick="(function(){document.getElementById('login-btn').click()})()">Log in</a> to start sharing.</p>
   <% else %>
     <h3>Sign up</h3>
     <form class="login-form" action="/signup" method="post">

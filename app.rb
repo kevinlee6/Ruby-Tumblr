@@ -117,9 +117,8 @@ end
 
 get '/user/:user_id/posts/:id' do
   begin
-    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-    if @user.id == @post.user_id
+    if params[:user_id].to_i == @post.user_id
       erb :show_post
     else
       raise 'error'

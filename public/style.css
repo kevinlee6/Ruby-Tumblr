@@ -221,7 +221,7 @@ section {
       padding: 10px; }
     #new-post form #post-content, #edit-post form #post-content {
       overflow: auto;
-      padding-bottom: 30%; }
+      min-height: 40vh; }
     #new-post form #post-btn, #edit-post form #post-btn {
       width: 30%; }
 
@@ -232,7 +232,7 @@ footer {
   padding: 2% 0; }
 
 #wrapper {
-  min-height: 74vh;
+  min-height: 80vh;
   margin: 0;
   padding: 0; }
 
