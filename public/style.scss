@@ -78,3 +78,41 @@
   color: black; }
 .pagination a:hover, .pagination a:focus {
   text-decoration: underline; }
+
+@media screen and (max-width: 600px) {
+  //#register {
+  //  top: 15%;
+  //}
+  //
+  //#register, .landing-content {
+  //  width: 80%;
+  //  margin: 0 auto;
+  //  left: 0;
+  //}
+  //
+  //#landing1-content {
+  //  top: 67%;
+  //}
+  //
+  //#landing2-content, #landing3-content {
+  //  top: 55%;
+  //}
+
+  #register {
+    display: none;
+  }
+
+  .landing-content {
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+  }
+
+  #landing1-content {
+    top: 15%;
+  }
+
+  #landing2-content, #landing3-content {
+    top: 55%;
+  }
+}

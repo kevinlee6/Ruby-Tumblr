@@ -73,7 +73,7 @@
     font-size: 1.6em; }
   #main-header #loginModal {
     color: black;
-    opacity: 0.9; }
+    opacity: 0.99; }
     #main-header #loginModal #user-modal-header {
       padding: 6px; }
     #main-header #loginModal .modal-footer {
@@ -101,7 +101,7 @@
     margin: 10px auto; }
 
 #register {
-  opacity: 0.9;
+  opacity: 0.95;
   padding: 30px;
   border-radius: 30px;
   color: white;
@@ -150,7 +150,7 @@
   background: white url(../media/landing.jpg) no-repeat center fixed;
   background-size: cover; }
   #get-started #get-started-content {
-    background: rgba(200, 200, 200, 0.6);
+    background: rgba(200, 200, 200, 0.8);
     padding: 30px;
     border-radius: 30px;
     color: black;
@@ -292,5 +292,20 @@ footer {
 
 .pagination a:hover, .pagination a:focus {
   text-decoration: underline; }
+
+@media screen and (max-width: 600px) {
+  #register {
+    display: none; }
+
+  .landing-content {
+    width: 80%;
+    margin: 0 auto;
+    left: 0; }
+
+  #landing1-content {
+    top: 15%; }
+
+  #landing2-content, #landing3-content {
+    top: 55%; } }
 
 /*# sourceMappingURL=style.css.map */
