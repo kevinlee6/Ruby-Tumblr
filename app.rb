@@ -13,7 +13,7 @@ enable :sessions
 
 get '/' do
   begin
-    @posts = Post.limit(20).offset(params[:page])
+    @posts = Post.all.order(datetime: :desc).limit(20).offset(params[:page])
     @paginate = Post.paginate(:page => params[:page], :per_page => 20)
   rescue
     @posts = nil
@@ -77,6 +77,12 @@ post '/account/password' do
   redirect '/account'
 end
 
+delete '/delete_post/:id' do
+  Post.find(params[:id]).destroy
+  flash[:info] = 'Your post has been deleted.'
+  redirect "/user/#{session[:user_id]}/posts"
+end
+
 delete '/account' do
   user = User.find(session[:user_id])
 
@@ -94,8 +100,8 @@ end
 get '/user/:id' do
   begin
     @user = User.find(params[:id])
-    @posts = @user.posts.limit(20)
-    @paginate = @posts.paginate(:page => params[:page], :per_page => 20)
+    @posts = @user.posts.order(datetime: :desc).limit(20).offset(params[:page])
+    @paginate = @posts.paginate(page: params[:page], per_page: 20)
   rescue
     flash[:warning] = 'There are no posts associated with this user!'
     redirect '/'
@@ -106,7 +112,7 @@ end
 get '/user/:id/posts' do
   begin
     @user = User.find(params[:id])
-    @posts = @user.posts.limit(20)
+    @posts = @user.posts.order(datetime: :desc).limit(20).offset(params[:page])
     @paginate = @posts.paginate(:page => params[:page], :per_page => 20)
   rescue
     flash[:warning] = 'This user has no posts!'
@@ -180,7 +186,7 @@ post '/posts' do
     flash[:warning] = validate
   end
 
-  redirect '/user/posts'
+  redirect "/user/#{session[:user_id]}/posts"
 end
 
 get '/login' do

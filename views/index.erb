@@ -6,7 +6,7 @@
         <button onclick="location.href='/user/posts/new'" class="btn btn-info">Add post</button>
       </div>
       <div id="posts-container" class="container">
-        <% @posts.reverse.each do |post| %>
+        <% @posts.each do |post| %>
           <section>
             <div class="container py-3 horizontal">
               <div class="card">
