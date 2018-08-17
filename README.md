@@ -11,6 +11,8 @@
     <li>Edit account information</li>
 </ul>
 
-example account info:
-    email: kevin@gmail.com
-    password: password
+<h5>example account info:</h5>
+<ul>
+    <li>email: kevin@gmail.com</li>
+    <li>password: password</li>
+</ul>
