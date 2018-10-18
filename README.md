@@ -1,18 +1,20 @@
-<h1><a href='https://ruby-tumblr.herokuapp.com'>SciHub</a></h1>
-<h3>Tumblr-like App written with Ruby/Sinatra microframework</h3>
+# [SciHub](https://ruby-tumblr.herokuapp.com)
 
-<h5>Features:</h5>
-<ul>
-    <li>Account creation</li>
-    <li>Account login</li>
-    <li>Create new posts</li>
-    <li>Edit posts</li>
-    <li>View posts made by other users</li>
-    <li>Edit account information</li>
-</ul>
+![SciHub homepage, with signup box](/public/media/scihub-homepage.png)
 
-<h5>example account info:</h5>
-<ul>
-    <li>email: kevin@gmail.com</li>
-    <li>password: password</li>
-</ul>
+## Tumblr-like App written with Ruby/Sinatra microframework
+
+### Features
+
+- Account creation
+- Account authentication/validation
+- Account login
+- Create new posts
+- Edit posts
+- View posts made by other users
+- Edit account information
+
+### Demo account info
+
+- Email: kevin@gmail.com
+- Password: password
