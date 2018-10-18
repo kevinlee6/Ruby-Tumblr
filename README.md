@@ -4,6 +4,11 @@
 
 ## Tumblr-like App written with Ruby/Sinatra microframework
 
+### Demo account info
+
+- Email: kevin@gmail.com
+- Password: password
+
 ### Features
 
 - Account creation
@@ -13,8 +18,4 @@
 - Edit posts
 - View posts made by other users
 - Edit account information
-
-### Demo account info
-
-- Email: kevin@gmail.com
-- Password: password
+- Mobile responsive
